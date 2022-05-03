@@ -25,7 +25,7 @@ const io = require('socket.io')(server, {
 
 const { SerialPort } = require('serialport')
 console.log('SerialPort:', SerialPort)
-// const ReadLine = SerialPort.parsers.Readline
+// const ReadLine = SerialPort.parsers.Readline 
 const { ReadlineParser } = require('@serialport/parser-readline')
 const port = new SerialPort({ path: 'COM7', baudRate: 9600 })
 const parser = port.pipe(new ReadlineParser({ delimiter: '\r\n' }))

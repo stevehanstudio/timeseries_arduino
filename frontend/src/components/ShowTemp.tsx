@@ -1,4 +1,4 @@
-import { TempType } from "../Types"
+import { TempType } from "../types/Types"
 
 interface ShowTempType {
   temp: number
