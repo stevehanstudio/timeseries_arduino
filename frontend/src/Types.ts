@@ -5,6 +5,7 @@ export enum TempType {
 
 export interface DataItem {
 	timestamp: string
+	// count: number
 	tempC: number
 	tempF: number
 }

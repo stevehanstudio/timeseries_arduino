@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Switch from 'react-switch'
 import { TempType } from '../Types'
 // import { convertTemp } from './helpers'
-import { AppContext, AppContextType } from '../context/Context'
+import { AppContext, AppContextType } from '../context/AppContext'
 
 const TempSwitch = () => {
 	const { tempType, toggleTempType } = useContext(AppContext) as AppContextType

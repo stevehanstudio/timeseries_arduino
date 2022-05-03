@@ -21,6 +21,15 @@ body {
   margin: 1rem;
 }
 
+.custom-tooltip {
+  background: #222;
+  opacity: 0.8;
+  border: 2px solid white;
+  border-radius: 0.1rem;
+  color: white;
+  padding: 0.2rem 0.8rem;
+}
+
 .center {
   display: flex;
   align-items: center;

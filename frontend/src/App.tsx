@@ -4,6 +4,7 @@
 // Context API https://www.youtube.com/watch?v=sP7ANcTpJr8
 // Context API Tutorial https://www.youtube.com/watch?v=GS6aVjHxcgM
 // Time-series Resharts example https://lifesaver.codes/answer/time-series-example-956
+// useReducer with useContext - setting state to any type https://lazypandatech.com/blog/NextJs/44/How-to-create-React-Context-using-useReducer-and-useContext-hook-with-TypeScript/
 
 import { useState, useEffect, useContext } from 'react'
 import io from "socket.io-client"
@@ -12,14 +13,15 @@ import { convertTemp } from './helpers'
 // import TempChart from './components/TempChart'
 import ShowTemp from './components/ShowTemp'
 import TempSwitch from './components/TempSwitch'
-import { AppContext, AppContextType } from './context/Context'
-import Example from './Example'
+import { AppContext, AppContextType } from './context/AppContext'
+// import Example2 from './Example2'
+import TimeSeriesChart from './TimeSeriesChart'
 
 function App() {
   const [tempC, setTempC] = useState(0)
   const [tempF, setTempF] = useState(0)
 
-  const { tempType, addData } = useContext(AppContext) as AppContextType
+  const { totalCount, tempType, addData } = useContext(AppContext) as AppContextType
   const socket = io('http://localhost:5000')
   const temp = tempType === TempType.C ? tempC : tempF
 
@@ -30,6 +32,7 @@ function App() {
       const {tempC, tempF} = convertTemp(inDataItem.temp)
       const dataItem: DataItem = {
         timestamp: inDataItem.timestamp,
+        // count: totalCount,
         tempC,
         tempF,
       }
@@ -37,16 +40,17 @@ function App() {
       setTempF(tempF)
       addData(dataItem)
     })
-  }, [socket, addData])
+  }, [socket, addData, totalCount])
 
   return (
 		<div className='App'>
 			<div className='App-header'>
-        <h1>Time series Data from Arudino</h1>
+        <h1>Time Series Data from Arudino</h1>
 				<ShowTemp temp={temp} tempType={tempType} />
 				<TempSwitch />
 			</div>
-      <Example />
+      <TimeSeriesChart />
+      {/* <Example2 /> */}
 			{/* <TempChart /> */}
 		</div>
   )

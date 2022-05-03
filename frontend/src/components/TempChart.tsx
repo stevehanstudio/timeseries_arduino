@@ -10,7 +10,7 @@ import {
 	// ReferenceArea,
 	ResponsiveContainer,
 } from 'recharts'
-import { AppContext, AppContextType } from '../context/Context'
+import { AppContext, AppContextType } from '../context/AppContext'
 import { TempType } from '../Types'
 
 const TempChart = () => {
