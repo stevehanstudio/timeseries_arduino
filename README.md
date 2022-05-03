@@ -7,7 +7,7 @@ This project was for the Arudino IoT section of the course [CNIT 133I - Javascri
 ![Time Series Arduino Project Block Diagram](images/TimeSeriesArduinoProjectBlockDiagram.jpg)
 
 # Project Folder Structure
-
+```
 ├── README.md # This file.
 ├── .gitignore # Git untracked files.
 ├── images
@@ -63,7 +63,7 @@ This project was for the Arudino IoT section of the course [CNIT 133I - Javascri
     │   └── CharlestonPierce.jpg # Image of Charleston Pierce
     ├── index.css # Global styles.
     └── index.js # Used for DOM rendering only.
-
+```
 
 The tech stack I used in this project are:
 
