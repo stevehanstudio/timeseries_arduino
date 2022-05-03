@@ -2,6 +2,11 @@
 
 This project was for Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) at CCSF.
 
+# Project Block Diagram
+
+![Time Series Arduino Project Block Diagram](images/TimeSeriesArduinoProjectBlockDiagram.jpg)
+
+
 The tech stack I used in this project are:
 
 Hardware:
