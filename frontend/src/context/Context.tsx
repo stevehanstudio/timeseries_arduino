@@ -1,33 +1,40 @@
-import { createContext, ReactNode, useContext } from 'react'
+import { useState, createContext, ReactNode, useContext, ReactElement } from 'react'
 import { TempType } from '../Types'
 import { DataItem } from '../Types'
 
-export interface AppContextInterface {
+export interface AppContextType {
+  count: number
 	data: DataItem[]
-	tempC: number
-	tempF: number
 	tempType: TempType
+	toggleTempType: () => void
+  addData: (data: DataItem) => void
 }
 
-type AppProviderProps = {
-  children: ReactNode
-}
-
-const initialAppContext: AppContextInterface = {
-	data: [],
-  tempC: 0,
-  tempF: 0,
-	tempType: TempType.C
-}
-
-export const AppContext = createContext<AppContextInterface>(initialAppContext)
+export const AppContext = createContext<AppContextType | null>(null)
 
 export const useGlobalContext = () => {
   return useContext(AppContext)
 }
 
-export const AppProvider = ({ children }: AppProviderProps) => (
-  <AppContext.Provider value={initialAppContext}>
-    {children}
-  </AppContext.Provider>
-)
+export const AppProvider = ({ children }: { children: ReactNode }): ReactElement => {
+  const [count, setCount] = useState(0)
+  const [data, setData] = useState<DataItem[]>([])
+  const [tempType, setTempType] = useState(TempType.C)
+
+  const toggleTempType = () => {
+    if (tempType === TempType.C) setTempType(TempType.F)
+    else setTempType(TempType.C)
+  }
+
+  const addData = (dataItem: DataItem) => {
+    setData([...data, dataItem])
+    // data.push(dataItem)
+    setCount(count+1)
+  }
+
+  return (
+    <AppContext.Provider value={{ count, data, tempType, toggleTempType, addData }}>
+      {children}
+    </AppContext.Provider>
+  )
+}

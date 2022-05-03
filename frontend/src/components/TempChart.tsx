@@ -1,4 +1,4 @@
-// import { useContext } from 'react'
+import { useContext } from 'react'
 import {
 	// Label,
 	LineChart,
@@ -10,13 +10,12 @@ import {
 	// ReferenceArea,
 	ResponsiveContainer,
 } from 'recharts'
-// import { AppContext, AppContextInterface } from '../context/Context'
-import { useGlobalContext } from '../context/Context'
+import { AppContext, AppContextType } from '../context/Context'
 import { TempType } from '../Types'
 
 const TempChart = () => {
 	// const { data, tempType } = useContext<AppContextInterface>(AppContext)
-	const { data, tempType } = useGlobalContext()
+	const { data, tempType } = useContext(AppContext) as AppContextType
 
 	return (
 		<ResponsiveContainer width='100%' height={400}>
@@ -27,7 +26,7 @@ const TempChart = () => {
 				margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
 			>
 				{/* <CartesianGrid strokeDasharray='3' horizontal='' vertical='true' /> */}
-				<XAxis dataKey='timestamp' />
+				<XAxis dataKey='count' type='number' />
 				<YAxis
 					dataKey={tempType === TempType.C ? 'tempC' : 'tempF'}
 					type='number'
@@ -35,9 +34,9 @@ const TempChart = () => {
 				<Line
 					type='monotone'
 					dataKey={tempType === TempType.C ? 'tempC' : 'tempF'}
-					// data={data}
+					data={data}
 					stroke='#ff7385'
-					dot={false}
+					// dot={false}
 					activeDot={{ r: 4 }}
 				/>
 			</LineChart>
