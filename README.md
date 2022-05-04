@@ -96,7 +96,7 @@ How to use a low pass filter with an RC circult so that instead of using a poten
 Printing Unicode characters on LCD.  I used this to display the degree ° symbol.<br/>
 [https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073](https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073)<br/>
 
-React Typescript Tutorial by Codevolution.  I found the useContext and useReducer (videos 12-15) to be partcularly useful for my project<br/>
+React Typescript Tutorial by Codevolution.  I found the useContext and useReducer (videos 12-15) to be partcularly helpful on my project.<br/>
 [https://www.youtube.com/watch?v=TiSGujM22OI&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK](https://www.youtube.com/watch?v=TiSGujM22OI&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK)<br/>
 
 More coming soon...
