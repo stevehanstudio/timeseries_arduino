@@ -1,6 +1,6 @@
 # Time Series Temperature Data from Arudino
 
-This project was for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) taught be [Professor Claudia da Silva](https://cdasilva.info/) at CCSF.  An [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermister and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).
+This project was for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) taught by [Professor Claudia da Silva](https://cdasilva.info/) at CCSF.  An [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermister and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).
 
 The Node uses the Serialport library to read from the Arduino and uses Socket.io send the data to the React frontend.  The React frontend uses socket.io-client to read the data and displays it.  It was shows the data on a chart as it comes in.  There's switch to switch between celsius and fahrenheit that communicates with the backend through a POST request.
 
@@ -54,7 +54,7 @@ Typescript is used on both the Node server and the React frontend.
 ---
 ## Arduino Uno
 
-Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17.pdf (pages 159-163)
+Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17.pdf (Lesson 15 pages 103-107)
 ![Components required for Arduino Uno](images/ArduinoComponentsRequired.jpg)
 
 ![Circuit diagram](images/Circuit.jpg)
@@ -85,4 +85,10 @@ npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+---
+
+## Resources
+
+Coming soon...
 
