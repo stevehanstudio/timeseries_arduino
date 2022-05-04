@@ -6,6 +6,7 @@ The Node uses the Serialport library to read from the Arduino and uses Socket.io
 
 Typescript is used on both the Node server and the React frontend.
 
+---
 ## Project Block Diagram
 
 ![Time Series Arduino Project Block Diagram](images/TimeSeriesArduinoProjectBlockDiagram.jpg)
@@ -51,14 +52,14 @@ Typescript is used on both the Node server and the React frontend.
                 └── helpers.ts - Helper function that returns the temperature in °C & °F given the temperature in Kevin.
 ```
 ---
-##Arduino Uno
+## Arduino Uno
 
-Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17/pdf (pages 159-163)
+Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17.pdf (pages 159-163)
 ![Components required for Arduino Uno](images/ArduinoComponentsRequired.jpg)
 
-![Wiring diagram](images/WiringDiagram.jpg)
-
 ![Circuit diagram](images/Circuit.jpg)
+
+![Wiring diagram](images/WiringDiagram.jpg)
 
 ---
 
