@@ -4,12 +4,12 @@ This project was for the Arudino IoT section of the course [CNIT 133I - Javascri
 
 The Node uses the Serialport library to read from the Arduino and uses Socket.io send the data to the React frontend.  The React frontend uses socket.io-client to read the data and displays it.  It was shows the data on a chart as it comes in.  There's switch to switch between celsius and fahrenheit that communicates with the backend through a POST request.
 
-Typescript is used on both the Node server and the React frontend.
+Typescript is used on both the Node server and the React frontend.<br/>
 
 ---
 ## Project Block Diagram
 
-![Time Series Arduino Project Block Diagram](images/TimeSeriesArduinoProjectBlockDiagram.jpg)
+![Time Series Arduino Project Block Diagram](images/TimeSeriesArduinoProjectBlockDiagram.jpg)<br/>
 
 ---
 ## Project Folder Structure
@@ -59,7 +59,7 @@ Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17.pdf (Lesson 15 pages 10
 
 ![Circuit diagram](images/Circuit.jpg)
 
-![Wiring diagram](images/WiringDiagram.jpg)
+![Wiring diagram](images/WiringDiagram.jpg)<br/>
 
 ---
 
@@ -84,17 +84,17 @@ then run
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.<br/>
 
 ---
 
 ## Resources
 
-How to use a low pass filter with an RC circult so that instead of using a potentiometer to control the LCD contrast, it can be software programmable.
+How to use a low pass filter with an RC circult so that instead of using a potentiometer to control the LCD contrast, it can be software programmable.<br/>
 [https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/](https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/)
 
-Printing Unicode characters on LCD.  I used this to display the degree ° symbol.
-[https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073](https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073)
+Printing Unicode characters on LCD.  I used this to display the degree ° symbol.<br/>
+[https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073](https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073)<br/>
 
 
 More coming soon...
