@@ -90,5 +90,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Resources
 
-Coming soon...
+How to use a low pass filter with an RC circult so that instead of using a potentiometer to control the LCD contrast, it can be software programmable.
+[https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/](https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/)
+
+Printing Unicode characters on LCD.  I used this to display the degree ° symbol.
+[https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073](https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073)
+
+
+More coming soon...
 
