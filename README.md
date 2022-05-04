@@ -1,8 +1,8 @@
 # Time Series Temperature Data from Arudino
 
-This project was for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) taught by [Professor Claudia da Silva](https://cdasilva.info/) at CCSF.  An [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermister and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).
+This project is for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) taught by [Professor Claudia da Silva](https://cdasilva.info/) at CCSF.  An [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermistor and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).
 
-The Node uses the Serialport library to read from the Arduino and uses Socket.io send the data to the React frontend.  The React frontend uses socket.io-client to read the data and displays it.  It was shows the data on a chart as it comes in.  There's switch to switch between celsius and fahrenheit that communicates with the backend through a POST request.
+The Node server uses the [Serialport](https://serialport.io/) library to read from the Arduino board and uses Socket.io(https://socket.io/) to send the data to the React frontend.  The React frontend uses [socket.io-client](https://socket.io/docs/v4/client-api/) to read the data and displays it.  It also shows the past data in a chart as it comes in.  There's a switch button to switch between celsius and fahrenheit that communicates with a Node [Express](https://expressjs.com/) backend through a Rest API POST request.
 
 Typescript is used on both the Node server and the React frontend.<br/>
 
@@ -91,11 +91,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.<
 ## Resources
 
 How to use a low pass filter with an RC circult so that instead of using a potentiometer to control the LCD contrast, it can be software programmable.<br/>
-[https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/](https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/)
+[https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/](https://www.instructables.com/1602-LCD-Contrast-Control-From-Arduino/)<br/>
 
 Printing Unicode characters on LCD.  I used this to display the degree ° symbol.<br/>
 [https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073](https://forum.arduino.cc/t/print-degree-symbol-on-lcd/19073)<br/>
 
+React Typescript Tutorial by Codevolution.  I found the useContext and useReducer (videos 12-15) to be partcularly useful for my project<br/>
+[https://www.youtube.com/watch?v=TiSGujM22OI&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK](https://www.youtube.com/watch?v=TiSGujM22OI&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK)<br/>
 
 More coming soon...
 

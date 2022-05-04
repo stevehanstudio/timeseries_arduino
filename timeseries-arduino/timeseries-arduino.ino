@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=--KxxMaiwSE
 #include <LiquidCrystal.h>
 
 int tempPin = A0;
@@ -23,7 +22,6 @@ void displayLCD(double tempK, char tempType) {
 }
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(3, OUTPUT);
   analogWrite(3, 128);
