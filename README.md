@@ -63,24 +63,26 @@ Source: Elegoo Super Starter Kit for UNO V1.0.2019.09.17.pdf (pages 159-163)
 
 ---
 
-To recreate, clone this repository, then
+## Installation Instructions
 
-using the Arduino IDE, open the file timeseries-arduino/timeseries-arduino.ino
+To run the app in the development mode, clone this repository, connect the Arduino Uno board to the serial port, then using the Arduino IDE, open the file timeseries-arduino/timeseries-arduino.ino, verify and upload to the board.
 
-cd in to backend and run
-
+For the backend Node server, cd in to the backend folder and run
+```
 npm install
+```
+then run
+```
+npm start
+```
+then for the frontend React app, in another terminal cd in to frontend and run
+```
+npm install
+```
+then run
+```
+npm start
+```
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
