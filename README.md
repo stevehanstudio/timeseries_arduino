@@ -1,6 +1,8 @@
 # Time Series Temperature Data from Arudino
 
-This project was for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) at CCSF.  A [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermister and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).  The
+This project was for the Arudino IoT section of the course [CNIT 133I - Javascript for IoT and XR](https://www.coursicle.com/ccsf/courses/CNIT/133I/) at CCSF.  An [Arduino Uno](https://www.amazon.com/gp/product/B01D8KOZF4/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1) is used to read temperature sensor data from a thermister and displayed on an LCD.  The data is also send to a backend Node server through the serial port (COM7 on my Windows 10 PC).
+
+The Node uses the Serialport library to read from the Arduino and uses Socket.io send the data to the React frontend.  The React frontend uses socket.io-client to read the data and displays it.  It was shows the data on a chart as it comes in.  There's switch to switch between celsius and fahrenheit that communicates with the backend through a POST request.
 
 Typescript is used on both the Node server and the React frontend.
 
