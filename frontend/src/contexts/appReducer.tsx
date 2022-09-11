@@ -27,7 +27,8 @@ const appReducer = (state:any, action: AppAction) => {
 			return {
 				...state,
 				totalCount: state.totalCount + 1,
-				data: state.data.concat(payload)
+				data: [...state.data, payload]
+				// data: state.data.concat(payload)
 			}
 		case 'TOGGLE_TEMP_TYPE':
 			console.log('Toggle Temp Type', payload)
